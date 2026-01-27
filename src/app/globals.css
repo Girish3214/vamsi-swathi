@@ -11,6 +11,7 @@
 
   --font-bonheur: var(--font-bonheur), sans-serif;
   --font-tangerine: var(--font-tangerine), cursive;
+  --font-poppins: var(--font-poppins), sans-serif;
 
   --radius-lg: 1.5rem;
   --radius-md: 1rem;
@@ -47,5 +48,27 @@
   }
   .desktop-layout {
     @apply mx-auto max-w-[1700px];
+  }
+}
+
+.gold-shimmer {
+  background: linear-gradient(
+    110deg,
+    #b8892d 10%,
+    #f3d38a 25%,
+    #fff0bd 40%,
+    #f3d38a 55%,
+    #b8892d 70%
+  );
+  background-size: 200% auto;
+  color: transparent;
+  background-clip: text;
+  -webkit-background-clip: text;
+  animation: shimmer 8s linear infinite;
+}
+
+@keyframes shimmer {
+  to {
+    background-position: -200% center;
   }
 }

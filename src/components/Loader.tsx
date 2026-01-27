@@ -20,8 +20,6 @@ const Loader = () => {
     return () => clearTimeout(timer);
   }, []);
 
-  console.log(isLoading);
-
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {
