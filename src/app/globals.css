@@ -1,26 +1,51 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --color-primary: #71473e;
+  --color-accent: #e9b234;
+  --color-background: #eaded4;
+  --color-foreground: #3f2e29;
+  --color-card: rgba(255, 255, 255, 0.4);
+  --color-buttons: #71473e;
+  --color-text-dark: #3f2e29;
+
+  --font-bonheur: var(--font-bonheur), sans-serif;
+  --font-tangerine: var(--font-tangerine), cursive;
+
+  --radius-lg: 1.5rem;
+  --radius-md: 1rem;
+  --radius-sm: 0.5rem;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@layer base {
+  body {
+    @apply bg-background text-foreground font-bonheur antialiased relative min-h-screen;
+    opacity: 1;
+  }
+  body::before {
+    content: "";
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-bonheur tracking-tight;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+@layer utilities {
+  .content-container {
+    @apply mx-auto max-w-[1170px] px-4 sm:px-6 lg:px-8;
+  }
+  .desktop-layout {
+    @apply mx-auto max-w-[1700px];
+  }
 }
