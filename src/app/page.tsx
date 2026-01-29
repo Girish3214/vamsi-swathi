@@ -9,10 +9,13 @@ import {
   LocationSection,
   Navbar,
 } from "@/components";
+import ContactSection from "@/components/ContactSection";
+import { IInvite } from "@/lib/models/Invite";
+import FooterSection from "@/components/FooterSection";
 
 export default function Home() {
   const [loading, setLoading] = useState(true);
-  const [data, setData] = useState<any>(null);
+  const [data, setData] = useState<IInvite | null>(null);
   const [error, setError] = useState<string | null>(null);
 
   useEffect(() => {
@@ -41,7 +44,6 @@ export default function Home() {
 
     fetchData();
   }, []);
-
   return (
     <div className="flex min-h-screen items-center justify-center relative bg-background text-foreground font-poppins">
       <AnimatePresence>{loading ? <Loader /> : null}</AnimatePresence>
@@ -65,6 +67,8 @@ export default function Home() {
           {/* CONTENT BELOW HERO */}
           <EventsSection events={data.events} />
           <LocationSection location={data.location} />
+          <ContactSection contacts={data.contacts} />
+          <FooterSection invite={data} />
         </main>
       ) : (
         <div className="flex flex-col items-center justify-center min-h-[60vh] text-center">

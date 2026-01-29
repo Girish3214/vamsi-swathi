@@ -28,9 +28,8 @@ const LocationSection = ({ location }: { location: ILocation }) => {
             <h2 className="text-3xl md:text-4xl font-heading text-primary">
               {venue}
             </h2>
-
             {/* Soft divider */}
-            <div className="h-px w-20 bg-primary/30 mx-auto md:mx-0" />
+            <div className="h-[2px] w-1/3 bg-primary/30 mx-auto md:mx-0" />
 
             <p className="text-foreground/80 leading-relaxed max-w-md">
               {venueDetails}

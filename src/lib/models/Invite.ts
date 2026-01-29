@@ -15,6 +15,12 @@ export interface ILocation {
   venueQR: string;
 }
 
+export interface IContact {
+  name: string;
+  relation?: string;
+  phone: string;
+}
+
 export interface IInvite extends Document {
   slug: string;
   brideName: string;
@@ -28,6 +34,7 @@ export interface IInvite extends Document {
     accentColor: string;
   };
   location: ILocation;
+  contacts: IContact[];
 }
 
 const EventSchema = new Schema<IEvent>({
@@ -36,6 +43,12 @@ const EventSchema = new Schema<IEvent>({
   time: { type: String, required: true },
   location: { type: String, required: true },
   description: { type: String },
+});
+
+const ContactSchema = new Schema<IContact>({
+  name: { type: String, required: true },
+  relation: { type: String },
+  phone: { type: String, required: true },
 });
 
 const InviteSchema = new Schema<IInvite>(
@@ -57,6 +70,7 @@ const InviteSchema = new Schema<IInvite>(
       venueGoogleMapsLink: { type: String, required: true },
       venueQR: { type: String, required: true },
     },
+    contacts: [ContactSchema],
   },
   { timestamps: true },
 );

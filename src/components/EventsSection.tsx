@@ -11,15 +11,20 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
           alt="lines"
           width={500}
           height={500}
-          className="w-md h-auto"
+          className="max-w-md h-auto mx-2"
         />
       </div>
-      <section className="content-container py-20">
+      <section className="content-container py-20 relative">
         {/* Event Details - Vertical Timeline */}
+        <Image
+          src="/images/flowers-upward.png"
+          alt=""
+          width={500}
+          height={500}
+          className="absolute top-12 right-[-80px] w-80 rotate-6 pointer-events-none hidden md:block"
+        />
         <div className="relative max-w-5xl mx-auto px-4 md:px-0">
           {/* Central Line */}
-          {/* <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary/10 via-primary/40 to-primary/10 -translate-x-1/2 rounded-full" /> */}
-
           <svg
             className="absolute left-8 md:left-1/2 top-0 h-full -translate-x-1/2"
             width="14"
@@ -29,13 +34,12 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
           >
             <path
               d="
-      M7 0
-      C 2 40, 12 80, 7 120
-      C 2 160, 12 200, 7 240
-      C 2 280, 12 320, 7 360
-      C 2 400, 12 440, 7 480
-      C 2 520, 12 560, 7 600
-    "
+                  M7 0
+                  C 2 40, 12 80, 7 120
+                  C 2 160, 12 200, 7 240
+                  C 2 280, 12 320, 7 360
+                  C 2 400, 12 440, 7 480
+                  C 2 520, 12 560, 7 600"
               fill="none"
               stroke="var(--color-primary)"
               strokeWidth="1.4"
@@ -127,7 +131,7 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
                           alt="groom"
                           width={70}
                           height={70}
-                          className="w-10 h-24"
+                          className="w-8 md:w-8 h-24"
                         />
                       </div>
                     </div>
@@ -140,7 +144,25 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
             })}
           </div>
         </div>
+        {/* Bottom-left floral ornament */}
+        <Image
+          src="/images/flowers-upward.png"
+          alt=""
+          width={500}
+          height={500}
+          className="absolute bottom-12 left-[-80px] w-80 -rotate-6 rotate-y-180 rotate-x-180 pointer-events-none hidden md:block"
+        />
       </section>
+
+      <div className="w-full h-auto flex justify-center items-center">
+        <Image
+          src="/images/decor-event-end.png"
+          alt="lines"
+          width={500}
+          height={500}
+          className="max-w-md h-auto opacity-55"
+        />
+      </div>
     </>
   );
 };
