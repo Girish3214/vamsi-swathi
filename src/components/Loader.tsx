@@ -20,6 +20,17 @@ const Loader = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  useEffect(() => {
+    if (isLoading) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => {
+      document.body.style.overflow = "";
+    };
+  }, [isLoading]);
+
   const pathVariants = {
     hidden: { pathLength: 0, opacity: 0 },
     visible: {

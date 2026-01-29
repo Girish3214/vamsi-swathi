@@ -11,7 +11,7 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
           alt="lines"
           width={500}
           height={500}
-          className="max-w-md h-auto mx-2"
+          className="max-w-md h-auto mx-2 w-1/2"
         />
       </div>
       <section className="content-container py-20 relative">
@@ -160,7 +160,7 @@ const EventsSection = ({ events }: { events: IEvent[] }) => {
           alt="lines"
           width={500}
           height={500}
-          className="max-w-md h-auto opacity-55"
+          className="max-w-md h-auto opacity-55 w-1/2"
         />
       </div>
     </>

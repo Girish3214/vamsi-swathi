@@ -13,7 +13,7 @@ const ContactSection = ({ contacts }: { contacts: IContact[] }) => {
           alt="lines"
           width={500}
           height={500}
-          className="max-w-md h-auto opacity-10 rotate-180"
+          className="max-w-md h-auto opacity-10 rotate-180 w-1/2"
         />
       </div>
       <section className="content-container py-10">
@@ -62,7 +62,7 @@ const ContactSection = ({ contacts }: { contacts: IContact[] }) => {
           alt="lines"
           width={500}
           height={500}
-          className="max-w-md h-auto opacity-10"
+          className="max-w-md h-auto opacity-10 w-1/2"
         />
       </div>
     </>
