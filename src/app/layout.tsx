@@ -22,14 +22,14 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://divyaandmanikanta.vercel.app"),
+  metadataBase: new URL("https://manikantaanddivya.vercel.app"),
   title: "Divyasree & Manikanta Raju | Wedding Invitation",
   description:
     "With the blessings of family and friends, we invite you to celebrate the wedding of Divya Sree and Manikanta Raju.",
   openGraph: {
     title: "Divyasree & Manikanta Raju | Wedding Invitation",
     description: "Join us in celebrating our wedding.",
-    url: "https://divyaandmanikanta.vercel.app",
+    url: "https://manikantaanddivya.vercel.app",
     siteName: "Divyasree & Manikanta Wedding",
     images: [
       {
