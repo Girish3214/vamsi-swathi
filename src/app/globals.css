@@ -60,7 +60,7 @@
     110deg,
     #b8892d 10%,
     #f3d38a 25%,
-    #fff0bd 40%,
+    #f3d38a 40%,
     #f3d38a 55%,
     #b8892d 70%
   );
@@ -69,6 +69,7 @@
   background-clip: text;
   -webkit-background-clip: text;
   animation: shimmer 8s linear infinite;
+  animation-delay: 4s;
 }
 
 @keyframes shimmer {

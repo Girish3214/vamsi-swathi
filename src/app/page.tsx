@@ -8,8 +8,11 @@ import ContactSection from "@/components/ContactSection";
 import FooterSection from "@/components/FooterSection";
 import { getInvite } from "@/lib/data";
 
+const BRIDE = process.env.BRIDE;
+const GROOM = process.env.GROOM;
+
 export default async function Home() {
-  const data = await getInvite("Divya", "Manikanta");
+  const data = await getInvite(BRIDE!, GROOM!);
   const parsedData = JSON.parse(JSON.stringify(data, null, 2));
 
   if (!data) {
