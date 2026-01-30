@@ -7,6 +7,6 @@ export default function robots(): MetadataRoute.Robots {
       allow: "/",
       disallow: "/private/",
     },
-    sitemap: "https://manikantaanddivya-66d6a.com/sitemap.xml",
+    sitemap: "https://divyaandmanikanta.vercel.app/sitemap.xml",
   };
 }
